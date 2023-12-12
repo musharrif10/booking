@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+  
+  <style>
+    /* Add your styles here */
+  </style>
+</head>
+<body>
+ <!--header-container starts here-->
+ <section class="header-container">
+  <!--home-container starts here-->
+  <section class="home-container">
+      <!--link index.html (home) through logo-->
+      <a href="./index.html">
+          <img src="./logo.png" alt="logo of Jetwing" width="300px" height="100px"></a>  
+      
+          <!--navbar section starts here-->
+          <section class="navbar">
+          <ul>
+              <li><a href="./Hotels.html">Hotels</a></li>
+              <li><a href="./Villas.html">Villas</a></li>
+              <li><a href="./dining.html">Dining</a></li>
+              <li><a href="./Adventures.html">Adventures</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./gallery.html">Gallery</a></li>
+              <li><a class="booknow" href="./Booknow.html">Book Now</a></li>
+              
+          </section>
+  </section>
+      <!--navbar section ends here-->
+
+
+
+
+
+
+
+
+  
+<!--Hotel booking Starts here-->
+<h1>Hotel Booking</h1>
+
+<form id="bookingForm">
+  
+  <label for="checkIn">Check-in Date:</label>
+  <input type="date" id="checkIn"><br>
+
+  <label for="checkOut">Check-out Date:</label>
+  <input type="date" id="checkOut"><br>
+  
+    <label for="selectyourhotel">Select Your Hotel/Villas:</label>
+    <select id="selectyourhotel" name="selectyourhotel" required>
+        <option value="Colombo 7">Colombo 7</option>
+        <option value="jetwing Light House Galle">Jetwing Light House Galle</option>
+        <option value="Jetwing Blue Negombo">Jetwing Blue Negombo</option>
+        <option value="The Cottage by Jetwing 
+        ">The Cottage by Jetwing</option>
+        <option value="Yathra HouseBoat by Jetwing">Yathra HouseBoat by Jetwing</option>
+        <option value="Jetwing Kurulubedda">Jetwing Kurulubedda</option>
+    </select>
+    
+    <section>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+    </section>
+    <section>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+    </section>
+    <section>
+        <label for="phonenumber">Phone Number:</label>
+        <input type="number" id="phonenumber" name="phonenumber" required>
+    </section>
+    <section>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </section>
+
+    <section class="singleroom">
+        <h4>Room Type: Single Room- 25000LKR</h4>
+                    <label for="singleroom">No. of Single Rooms:</label>
+                    <input type="number" name="singlerooms" id="singleroom" min="0" max="10" value="0">
+    </section>
+    
+    <section class="doubleroom">
+        <h4>Room Type: Double Room- 35000LKR</h4>
+                    <label for="doubleroom">No. of Double Rooms:</label>
+                    <input type="number" name="num" id="doubleroom" min="0" max="10" value="0">
+    </section>
+
+    <section class="tripleroom">
+        <h4>Room Type: Triple Room- 40000 LKR</h4>
+                    <label for="tripleroom">No. of Triple Rooms:</label>
+                    <input type="number" name="tripleroom" id="tripleroom" min="0" max="10" value="0">
+    </section>
+
+    <label for="roomType">Room Type:</label>
+  <select id="roomType">
+    <option value="single">Single</option>
+    <option value="double">Double</option>
+    <option value="triple">Triple</option>
+  </select><br>
+
+  <label for="adults">Number of Adults:</label>
+  <input type="number" id="adults" min="1" value="0"><br>
+
+  <label for="kids">Number of Kids:</label>
+  <input type="number" id="kids" min="0" value="0"><br>
+
+  <label>Extra Requirements:</label>
+  <input type="checkbox" id="wifi"> WiFi
+  <input type="checkbox" id="poolView"> Pool View
+  <input type="checkbox" id="gardenView"> Garden View<br>
+
+  <label for="kidsMeals">Extra Meals for Kids:</label>
+  <input type="number" id="kidsMeals" min="0" value="0"><br>
+
+  <label for="extraBed">Extra Bed:</label>
+  <input type="number" id="extraBed" min="0" value="0"><br>
+
+  <label for="promoCode">Promo Code:</label>
+  <input type="text" id="promoCode"><br>
+
+  <button type="button" id="calculateButton">Calculate Cost</button>
+  <button type="button" id="bookNowButton">Book Now</button>
+</form>
+<!--Booking Summery-->
+<div id="currentSummary">
+  <h2>Current Booking Summary</h2>
+  <table id="summaryTable">
+    <!-- Summary table will be updated dynamically here -->
+  </table>
+</div>
+
+<div id="overallSummary" style="display:none;">
+    <h2>Overall Booking Summary</h2>
+    <table id="finalSummaryTable">
+      <!-- Final summary table will be shown here -->
+    </table>
+    <button type="button" id="loyaltyButton">Check Loyalty</button>
+    <p id="loyaltyPoints" style="display:none;">Loyalty Points: <span id="points">0</span></p>
+  </div>
+<!--Hotel booking ends here-->
+
+<!--Adventure booking Starts here-->
+<h1>Adventure Booking</h1>
+<form action="adventureform">
+
+    <label for="adventuretype">Adventure Type:</label>
+    <select name="adventuretype" id="adventuretype">
+        <option value="Diving">Diving</option>
+    
+    </select>
+
+    <section>
+        <label for="localadult">Local Adult(1 hour- 5000 LKR):</label>
+        <input type="number" name="adlocaladult" id="adlocaladult" min="0" max="10" value="0">
+    </section>
+
+    <section>
+        <label for="localkid">Local Kid(1 hour- 2000 LKR):</label>
+        <input type="number" name="adlocalkid" id="adlocalkid" min="0" max="10" value="0">
+    </section>
+
+
+    <section>
+        <label for="foreignadult">Foreign Adult(1 hour- 10000 LKR):</label>
+        <input type="number" name="adforeignadult" id="adforeignadult" min="0" max="10" value="0">
+    </section>
+
+
+    <section>
+        <label for="foreignkid">foreign Kid(1 hour- 5000 LKR):</label>
+        <input type="number" name="adforeignkid" id="adforeignkid" min="0" max="10" value="0">
+    </section>
+
+
+    <section>
+        <label for="guideforadult">Guide for Adult(1000 LKR):</label>
+        <input type="checkbox" id="adguideforadult" name="adguideforadult">
+                
+    </section>
+
+    <section>
+        <label for="guideforkids">Guide for Kids(500 LKR):</label>
+        <input type="checkbox" id="adguideforkids" name="adguideforkids">
+    </section>
+
+    <button type="button" id="bookAdventureButton">Book Adventure</button>
+    <button type="button" id="saveFavoriteButton">Save as Favorite</button>-->
+
+</form>
+
+
+<h1>Adventure Booking</h1>
+  <!-- Adventure Booking Summary -->
+  <div id="currentSummary">
+    <h2>Current Adventure Booking Summary</h2>
+    <table id="adventureSummaryTable">
+      <!-- Adventure summary table will be updated dynamically here -->
+    </table>
+    <p id="currentAdventureCost">Current Adventure Booking Cost: <span id="adventureCost">0</span> LKR</p>
+  </div>
+
+
+ <!--Footer-->
+ <footer class="footer">
+  <section class="footer-container">
+      <section class="row">
+          <section class="footer-col">
+              <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./Hotels.html"> Hotels </a></li>
+                  <li><a href="">  </a></li>
+              </ul>
+          </section>
+          <section class="footer-col">
+              <ul>
+                  <li><a href="./Villas.html"> Villas </a></li>
+                  <li><a href="./dining.html"> Dining </a></li>
+                  <li><a href="./Adventures.html"> Adventures </a></li>
+                  <li><a href="#"> </a> </li>
+                  <li><a href="#"> </a> </li>
+              </ul>
+          </section>
+          <section class="footer-col">
+              
+              <ul>
+                  <li><a href="./about.html">About Us</a></li>
+                  <li><a href="./gallery.html"> Gallery </a></li>
+                  <li><a href="./Booknow.html"> Book Now </a></li>
+              </ul>
+          </section>
+  
+      </section>
+  </section>
+</footer>  
+
+
+
+<script src="./main.js"></script>
+
+</body>
+</html>
+</body>
+</html>
